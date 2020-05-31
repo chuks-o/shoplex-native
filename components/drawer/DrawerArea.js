@@ -6,6 +6,7 @@ import Screen from "../reusable/Screen";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
 import DrawerLinks from "./DrawerLinks";
 import AppButton from "../reusable/AppButton";
+import AppProfileCard from "../reusable/AppProfileCard";
 
 const drawerData = [
   { name: "Home", icon: "home" },
@@ -15,23 +16,19 @@ const drawerData = [
   { name: "FAQ's", icon: "info" },
 ];
 
-export default function DrawerArea({ navigation }) {
+export default function DrawerArea(props) {
+  console.log(props);
   return (
     <Screen>
       <View style={styles.container}>
-        <View style={styles.profileSection}>
-          <View style={styles.imageSection}>
-            <Image
-              borderRadius={100}
-              borderColor={colors.lightGrey}
-              source={require("../../assets/avatar.png")}
-              style={styles.image}
-            />
-          </View>
-          <View style={styles.profileNameSection}>
-            <AppText style={styles.username}>Okpala Chukwualasu</AppText>
-            <AppText style={styles.viewProfileText}>View Profile</AppText>
-          </View>
+        <View
+          style={{
+            borderBottomWidth: 1,
+            padding: 18,
+            borderColor: colors.lightGrey,
+          }}
+        >
+          <AppProfileCard name="Ciroma Adekunle Gold" />
         </View>
       </View>
       <ScrollView
@@ -64,33 +61,7 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     paddingHorizontal: 20,
   },
-  image: {
-    height: 60,
-    width: 60,
-    borderWidth: 1,
-  },
-  imageSection: {
-    marginRight: 13,
-  },
 
-  profileNameSection: {
-    width: "70%",
-  },
-  profileSection: {
-    padding: 18,
-    flexDirection: "row",
-    alignItems: "flex-start",
-    flexWrap: "nowrap",
-    borderBottomWidth: 1,
-    borderColor: colors.lightGrey,
-  },
-  username: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: colors.dark,
-    marginBottom: 5,
-    lineHeight: 24,
-  },
   viewProfileText: {
     color: "grey",
     fontSize: 16,

@@ -13,7 +13,7 @@ export default function DrawerNavigation() {
       drawerStyle={{
         width: 260,
       }}
-      drawerContent={() => <DrawerArea />}
+      // drawerContent={(props) => <DrawerArea {...props} />}
       hideStatusBar={true}
     >
       <DrawerStack.Screen name="Home" component={BottomTabNavigator} />

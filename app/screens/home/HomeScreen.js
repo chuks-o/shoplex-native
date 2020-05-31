@@ -101,7 +101,11 @@ const HomeScreen = ({ navigation }) => {
                 data={products}
                 renderItem={({ item, index, separators }) => (
                   <ProductCard
-                    goToDetails={() => navigation.navigate("Product")}
+                    goToDetails={() =>
+                      navigation.navigate("Product", {
+                        productTitle: item.title,
+                      })
+                    }
                     product={item}
                   />
                 )}

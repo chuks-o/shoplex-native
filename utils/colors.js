@@ -8,6 +8,7 @@ const colors = {
   primary: "#00bdaa",
   primaryTint: "#e7f9f7",
   secondary: "#fe346e",
+  secondaryTint: "#FFE1E9",
   white: "#ffffff",
 };
 

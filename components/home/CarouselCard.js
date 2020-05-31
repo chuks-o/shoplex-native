@@ -24,22 +24,20 @@ export default function CarouselCard({ data }) {
 const styles = StyleSheet.create({
   categoryCard: {
     backgroundColor: colors.white,
-    marginRight: 15,
-    height: 140,
+    marginRight: 10,
+    height: 190,
     borderWidth: 1,
-    maxWidth: 240,
-    minWidth: 240,
+    width: 145,
     borderColor: colors.white,
-    borderTopLeftRadius: 7,
-    borderTopRightRadius: 7,
   },
   carouselImg: {
-    height: 100,
+    height: 150,
   },
   categoryText: {
     flex: 1,
-    paddingHorizontal: 10,
     alignItems: "center",
+    borderBottomLeftRadius: 7,
+    borderBottomRightRadius: 7,
     justifyContent: "center",
     backgroundColor: colors.lightGrey,
   },

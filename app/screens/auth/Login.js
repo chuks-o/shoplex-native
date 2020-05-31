@@ -5,9 +5,11 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import { AuthContext } from "../../../utils/AuthProvider";
 import AppText from "../../../components/reusable/AppText";
 import * as Yup from "yup";
-import AppFormField from "../../../components/forms/AppFormField";
-import AppSubmitButton from "../../../components/forms/AppSubmitButton";
-import AppForm from "../../../components/forms/AppForm";
+import {
+  AppForm,
+  AppSubmitButton,
+  AppFormField,
+} from "../../../components/forms";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required().email().label("Email"),

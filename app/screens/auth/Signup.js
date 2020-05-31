@@ -24,19 +24,19 @@ export default function Login({ navigation }) {
       <View style={styles.signupBody}>
         <View>
           <AppText style={styles.signupHeader}>Sign Up</AppText>
-          <View>
+          <View style={styles.inputContainer}>
             <AppTextInput placeholder="Email address" />
           </View>
-          <View>
+          <View style={styles.inputContainer}>
             <AppTextInput placeholder="Firstname" />
           </View>
-          <View>
+          <View style={styles.inputContainer}>
             <AppTextInput placeholder="Lastname" />
           </View>
-          <View>
+          <View style={styles.inputContainer}>
             <AppTextInput placeholder="Phone Number" />
           </View>
-          <View>
+          <View style={styles.inputContainer}>
             <AppTextInput placeholder="Password" />
           </View>
 
@@ -44,9 +44,6 @@ export default function Login({ navigation }) {
             <AppText style={styles.smallText}>
               I agree to the terms and condition
             </AppText>
-            {/* <AppText style={{ ...styles.smallText, marginLeft: "auto" }}>
-              Login with touch ID
-            </AppText> */}
           </View>
 
           <AppButton
@@ -83,6 +80,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.primaryTint,
+  },
+  inputContainer: {
+    marginBottom: 10,
   },
   signupHeader: {
     fontSize: 36,

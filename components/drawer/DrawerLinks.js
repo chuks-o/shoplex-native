@@ -23,8 +23,8 @@ export default function DrawerLinks({ name, icon }) {
 
 const styles = StyleSheet.create({
   drawerLink: {
-    fontSize: 20,
-    fontWeight: "600",
+    fontSize: 18,
+    fontWeight: "500",
     color: colors.dark,
   },
   drawerContentBody: {

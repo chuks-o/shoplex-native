@@ -8,8 +8,10 @@ export default function AppButton({
   background = "primary",
   textColor = "white",
   title,
+  children,
 }) {
   const underlays = {
+    secondary: "secondary",
     primary: "darkPrimary",
     white: "lightGrey",
     transparent: "",
@@ -23,7 +25,7 @@ export default function AppButton({
       style={[styles.button, { backgroundColor: colors[background] }]}
     >
       <Text style={[styles.buttonText, { color: colors[textColor] }]}>
-        {title}
+        {title} {children}
       </Text>
     </TouchableHighlight>
   );

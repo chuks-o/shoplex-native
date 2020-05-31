@@ -15,6 +15,7 @@ const HomeStackScreen = ({ navigation, route }) => {
   } else {
     navigation.setOptions({ tabBarVisible: true });
   }
+
   return (
     <HomeStack.Navigator
       screenOptions={{
@@ -22,9 +23,6 @@ const HomeStackScreen = ({ navigation, route }) => {
         headerTitleStyle: {
           color: colors.dark,
           fontWeight: "bold",
-        },
-        headerBackTitleStyle: {
-          fontSize: 16,
         },
       }}
     >
@@ -56,7 +54,14 @@ const HomeStackScreen = ({ navigation, route }) => {
           ),
         }}
       />
-      <HomeStack.Screen name="Product" component={Product} />
+      <HomeStack.Screen
+        name="Product"
+        options={
+          (({ route }) => ({ title: route.params.productTitle }),
+          { headerShown: false })
+        }
+        component={Product}
+      />
       <HomeStack.Screen name="Categories" component={AllCategories} />
     </HomeStack.Navigator>
   );
